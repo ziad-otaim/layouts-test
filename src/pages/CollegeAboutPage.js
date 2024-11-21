@@ -1,5 +1,5 @@
 const CollegeAboutPage = () => {
-  return <div>Hello subdomain About Page</div>;
+  return <div>Hello layoutConfig About Page</div>;
 };
 
 export default CollegeAboutPage;

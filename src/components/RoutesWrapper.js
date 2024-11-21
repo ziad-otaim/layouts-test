@@ -1,18 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { L1HomePage, L1AboutPage } from "../pages/LayoutsPages/L1";
-
-import { UniversityColleges } from "../components/University";
-
 import RoutesMiddleware from "./RoutesMiddleware";
 import { useLayoutConfig } from "../context/LayoutConfigContext";
-
-const COMPONENTS = {
-  L1HomePage: L1HomePage,
-  L1AboutPage: L1AboutPage,
-  UniversityColleges: UniversityColleges,
-};
+import { COMPONENTS } from "../utils/components";
 
 const RoutesWrapper = () => {
   const { layoutConfig } = useLayoutConfig();
@@ -22,13 +13,10 @@ const RoutesWrapper = () => {
       <Router>
         <RoutesMiddleware>
           <Routes>
-            {layoutConfig.pages.map((page) => (
-              <Route
-                path={page.path}
-                element={COMPONENTS[page.component]}
-                key={page.id}
-              />
+            {layoutConfig.pages.map(({ path, component }, index) => (
+              <Route key={index} path={path} element={COMPONENTS[component]} />
             ))}
+            <Route path="*" element={<div className="error">Error 404, Page Not Found!</div>} />
           </Routes>
         </RoutesMiddleware>
       </Router>

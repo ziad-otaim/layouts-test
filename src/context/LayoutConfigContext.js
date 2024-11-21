@@ -8,10 +8,12 @@ export const LayoutConfigProvider = ({ layouts, children }) => {
 
   useEffect(() => {
     const subdomain = getSubdomain() || "mu";
+    console.log(subdomain);
+
     const config = getLayoutConfig(layouts, subdomain);
 
     // console.log(layouts);
-    // console.log(subdomain);
+    // console.log(layoutConfig);
     // console.log(config);
 
     setLayoutConfig(config);

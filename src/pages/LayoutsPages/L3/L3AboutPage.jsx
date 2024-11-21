@@ -1,9 +1,9 @@
 import { useLayoutConfig } from "../../../context/LayoutConfigContext";
 
-const L1HomePage = () => {
+const L3AboutPage = () => {
   const { layoutConfig } = useLayoutConfig();
 
-  return <h1>Hello L1 {layoutConfig.name} Home Page</h1>;
+  return <h1>Hello L3 {layoutConfig.name} About Page</h1>;
 };
 
-export default L1HomePage;
+export default L3AboutPage;

@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useLayoutConfig } from "../context/LayoutConfigContext";
 
 const RoutesMiddleware = ({ children, middlewares = [] }) => {
-  const { subdomain } = useLayoutConfig();
+  const { layoutConfig } = useLayoutConfig();
   const location = useLocation();
   const navigate = useNavigate();
 

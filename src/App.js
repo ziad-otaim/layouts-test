@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RoutesWrapper from "./components/RoutesWrapper";
 import { LayoutConfigProvider } from "./context/LayoutConfigContext";
+import "./App.css";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
