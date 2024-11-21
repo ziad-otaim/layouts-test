@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import RoutesWrapper from "./components/RoutesWrapper";
 import { LayoutConfigProvider } from "./context/LayoutConfigContext";
 import "./App.css";
+import data from "./utils/data.json";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [layouts, setLayouts] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [layouts, setLayouts] = useState(data.layouts);
 
   const fetchlayouts = async () => {
     try {
@@ -19,7 +20,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchlayouts();
+    // fetchlayouts();
   }, []);
 
   if (loading) {

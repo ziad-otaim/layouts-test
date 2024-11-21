@@ -1,0 +1,63 @@
+{
+  "layouts": [
+    {
+      "id": 0,
+      "type": "university",
+      "name": "MU Main Portal",
+      "subdomain": "mu",
+      "layout_level": 1,
+      "pages": [
+        { "path": "/", "component": "L1HomePage" },
+        { "path": "/about", "component": "L1AboutPage" },
+        { "path": "/colleges", "component": "UniversityColleges" }
+      ],
+      "theme": "green",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRjYfeuZfDZfshe8HrHQrmjXtOl1vqAgBLhA&s"
+    },
+    {
+      "id": 1,
+      "type": "college",
+      "name": "FEE",
+      "subdomain": "fee",
+      "layout_level": 2,
+      "pages": [
+        { "path": "/", "component": "L2HomePage" },
+        { "path": "/about", "component": "L2AboutPage" },
+        { "path": "/departments", "component": "CollegeDepartments" }
+      ],
+      "theme": "#007BFF",
+      "logo": "https://media.licdn.com/dms/image/v2/C560BAQEzb9YF7zvE0w/company-logo_200_200/company-logo_200_200/0/1631389001498?e=2147483647&v=beta&t=4mgWq-CO8l4J_DJ4ZNw1AdgSltUf4kr5P--qukmHQsc"
+    },
+    {
+      "id": 2,
+      "type": "college",
+      "name": "Medicine",
+      "subdomain": "med",
+      "layout_level": 2,
+      "pages": [
+        { "path": "/", "component": "L2HomePage" },
+        { "path": "/about", "component": "L2AboutPage" },
+        { "path": "/departments", "component": "CollegeDepartments" },
+        { "path": "/students", "component": "CollegeStudents" }
+      ],
+      "theme": "#28A745",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlp7rKJBOQUDgF5T4xFudysP1pfdeUkL_vwQ&s"
+    },
+    {
+      "id": 4,
+      "type": "department",
+      "name": "Computer Science",
+      "subdomain": "fee.cs",
+      "layout_level": 3,
+      "pages": [
+        { "path": "/", "component": "L3HomePage" },
+        { "path": "/about", "component": "L3AboutPage" },
+        { "path": "/staff", "component": "DepartmentStaff" },
+        { "path": "/staff/:id", "component": "DepartmentMember" },
+        { "path": "/students", "component": "DepartmentStudents" }
+      ],
+      "theme": "blue",
+      "logo": "https://r2.erweima.ai/imgcompressed/img/compressed_d34e66a10c7f09aae324e095d9e8ed79.webp"
+    }
+  ]
+}
